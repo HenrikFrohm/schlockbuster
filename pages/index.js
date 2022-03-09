@@ -11,6 +11,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       test
+      {/*      <Image src="/img/poster.jpg" alt="Poster" layout="fill" /> */}
     </div>
   );
 }
