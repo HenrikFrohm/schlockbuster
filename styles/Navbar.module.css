@@ -1,7 +1,7 @@
 .container {
   height: 100px;
   padding: 0px 50px;
-  background-color: #d1411e;
+  background-color: #9d68cf;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -10,17 +10,17 @@
   z-index: 999;
 }
 
-.item {
+.itemLeft {
   flex: 1;
   display: flex;
   align-items: center;
 }
 
-.item:nth-child(2) {
+.itemCenter {
   flex: 3;
 }
 
-.item:last-child {
+.itemRight {
   justify-content: flex-end;
 }
 
@@ -45,6 +45,11 @@
 .text:last-child {
   font-size: 20px;
   font-weight: bold;
+}
+
+.logoText {
+  font-size: 23px;
+  font-weight: 800;
 }
 
 .list {
