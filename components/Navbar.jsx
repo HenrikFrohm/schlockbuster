@@ -4,7 +4,7 @@ import { CartOutline } from "react-ionicons";
 
 const Navbar = () => {
   return (
-    // main container for navbar
+    // main container for navbar, with children containers for items at different positions
     <div className={styles.container}>
       <div className={styles.itemLeft}>
         <div className={styles.callButton}>

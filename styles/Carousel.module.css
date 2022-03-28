@@ -1,4 +1,38 @@
 .container {
-  height: calc(100vh - 100px);
-  background-color: #9d68cf;
+  height: calc(100vh - 250px);
+  background-color: #9d68cfd5;
+  overflow: hidden;
+}
+
+.arrowContainer {
+  position: absolute;
+  width: 10%;
+  height: 20%;
+  top: 0;
+  bottom: 34%;
+  margin: auto;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.wrapper {
+  display: flex;
+  width: 300vw;
+  height: 60%;
+  transition: all 0.5s ease-in-out;
+}
+
+.imgContainer {
+  width: 100vw;
+  height: 100%;
+  position: relative;
+}
+
+@media screen and (min-width: 721px) {
+  .arrowContainer {
+    width: 70px;
+    height: 90px;
+    right: 40em;
+    left: 40em;
+  }
 }
