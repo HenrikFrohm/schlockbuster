@@ -51,14 +51,17 @@ const Carousel = () => {
       >
         <Image src="/img/arrowr.png" alt="" layout="fill" objectFit="contain" />
       </div>
-      {/* 
+
       <div className={styles.textContainer}>
-        <div className={styles.texts}>
-          <div className={styles.text}>Movie</div>
-          <div className={styles.text}>Description</div>
-        </div>
+        <h1 className={styles.title}>MOVIE TITLE</h1>
+        <p className={styles.description}>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat, eum
+          facere. Numquam omnis voluptates consectetur pariatur mollitia odit
+          alias cupiditate, sint, modi dignissimos laboriosam dolorum possimus
+          corrupti excepturi aspernatur distinctio.
+        </p>
       </div>
-      */}
+      <div className={styles.browse}>Browse more titles</div>
     </div>
   );
 };

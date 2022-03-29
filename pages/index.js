@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import Carousel from "../components/Carousel";
+import MovieList from "../components/MovieList";
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
@@ -12,6 +13,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Carousel />
+      <MovieList />
       {/*      <Image src="/img/poster.jpg" alt="Poster" layout="fill" /> */}
     </div>
   );

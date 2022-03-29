@@ -1,0 +1,22 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 10px;
+}
+
+.title {
+}
+
+.description {
+  font-size: 16px;
+  width: 70%;
+}
+
+.wrapper {
+  display: flex;
+  width: 100%;
+}
+
+.footerItem {
+  width: 7%;
+}
