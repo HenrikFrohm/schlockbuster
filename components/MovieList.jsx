@@ -20,6 +20,7 @@ const MovieList = () => {
         <MovieCard />
         <MovieCard />
         <MovieCard />
+        <MovieCard />
       </div>
     </div>
   );

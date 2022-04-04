@@ -7,8 +7,8 @@ const Carousel = () => {
   const [index, setIndex] = useState(0);
   // array for images to avoid repeating code.
   const featuredImages = [
-    "/img/poster.jpg",
     "/img/poster3.jpg",
+    "/img/poster4.jpg",
     "/img/poster.jpg",
   ];
 
