@@ -1,5 +1,6 @@
 .container {
   height: calc(100vh - 250px);
+  padding-top: 15px;
   border: 0;
   border-bottom: 0.1px;
   border-color: black;
@@ -33,15 +34,33 @@
 .textContainer {
   display: flex;
   justify-content: center;
+
+  text-align: center;
+  flex-direction: column;
+  padding: 5px 28%;
+  margin-top: -10px;
+}
+
+.description {
+  text-align: center;
+  margin-top: -5px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
   align-items: center;
   text-align: center;
   flex-direction: column;
-  padding: 5px 31%;
 }
 
 .browse {
-  display: flex;
-  padding: 20px 10px;
+}
+
+@media screen and (max-width: 1050px) {
+  .textContainer {
+    padding: 5px 22%;
+  }
 }
 
 @media screen and (min-width: 721px) {
@@ -52,3 +71,68 @@
     left: 40em;
   }
 }
+
+@media screen and (max-width: 700px) {
+  .container {
+    height: calc(100vh - 370px);
+  }
+  .wrapper {
+    height: 50%;
+  }
+
+  .arrowContainer {
+    width: 70px;
+    height: 60px;
+    right: 26em;
+    left: 26em;
+    top: 0;
+    bottom: 45%;
+  }
+}
+
+@media screen and (max-width: 670px) {
+  .textContainer {
+    padding: 5px 15%;
+  }
+}
+
+@media screen and (max-width: 510px) {
+  .arrowContainer {
+    width: 50px;
+    height: 40px;
+    right: 3em;
+    left: 3em;
+    top: 0;
+    bottom: 45%;
+  }
+  .textContainer {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .textContainer {
+    font-size: 14px;
+    margin-top: -10%;
+  }
+}
+
+/* 
+@media screen and (max-width: 760px) {
+  .imgContainer {
+    height: 80%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .imgContainer {
+    height: 70%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .imgContainer {
+    height: 60%;
+  }
+}
+*/

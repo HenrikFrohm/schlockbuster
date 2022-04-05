@@ -60,8 +60,11 @@ const Carousel = () => {
           alias cupiditate, sint, modi dignissimos laboriosam dolorum possimus
           corrupti excepturi aspernatur distinctio.
         </p>
+        <div className={styles.buttons}>
+          <div className={styles.browse}>Browse more titles</div>
+          <div className={styles.browse}>Add to cart</div>
+        </div>
       </div>
-      <div className={styles.browse}>Browse more titles</div>
     </div>
   );
 };
