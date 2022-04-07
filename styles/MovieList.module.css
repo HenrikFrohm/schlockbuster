@@ -5,19 +5,13 @@
   align-items: center;
   justify-content: center;
   text-align: center;
+  color: #b7903c;
 }
 
 .title {
   width: 100%;
   text-align: left;
-  padding: 5px 8%;
-}
-
-.description {
-  font-size: 18px;
-  width: 100%;
-  text-align: left;
-  padding: 5px 8%;
+  padding: 1px 8%;
 }
 
 .wrapper {

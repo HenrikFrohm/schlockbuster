@@ -1,15 +1,16 @@
 import Image from "next/image";
 import styles from "../styles/Carousel.module.css";
 import { useState } from "react";
+import { ArrowBackOutline, ArrowForwardOutline } from "react-ionicons";
 
 const Carousel = () => {
   // useState hook to set index, starting with first image.
   const [index, setIndex] = useState(0);
   // array for images to avoid repeating code.
   const featuredImages = [
-    "/img/poster3.jpg",
-    "/img/poster4.jpg",
-    "/img/poster.jpg",
+    "/img/Sharknado.jpg",
+    "/img/i02_TheBlob.jpg",
+    "/img/i01_TheRoom.jpg",
   ];
 
   // conditional function to set index correctly when onclick event for right or left arrow is triggered, showing images in correct order.
@@ -27,10 +28,10 @@ const Carousel = () => {
     <div className={styles.container}>
       <div
         className={styles.arrowContainer}
-        style={{ left: 0 }}
+        style={{ left: 210 }}
         onClick={() => handleArrow("l")}
       >
-        <Image src="/img/arrowl.png" alt="" layout="fill" objectFit="contain" />
+        <ArrowBackOutline alt="" height="50px" width="50px" color="#b7903c" />
       </div>
       {/* css function to reposition element horizontally at correct size when onclick event is executed */}
       <div
@@ -46,10 +47,15 @@ const Carousel = () => {
       </div>
       <div
         className={styles.arrowContainer}
-        style={{ right: 0 }}
+        style={{ right: 180 }}
         onClick={() => handleArrow("r")}
       >
-        <Image src="/img/arrowr.png" alt="" layout="fill" objectFit="contain" />
+        <ArrowForwardOutline
+          alt=""
+          height="50px"
+          width="50px"
+          color="#b7903c"
+        />
       </div>
 
       <div className={styles.textContainer}>

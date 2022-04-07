@@ -13,8 +13,9 @@ const Footer = () => {
           <h1 className={styles.logo}>SCHLOCKBUSTER</h1>
           <p className={styles.logoDescription}>
             Remember a time when you could actually hold a physical copy of a
-            VHS or DVD? Schockbuster got you covered; it's a platform for people
-            around the world looking for new and old b-movies to rent or buy.
+            VHS or DVD? Schockbuster got you covered; it is a platform for
+            people around the world looking for new and old b-movies to rent or
+            buy.
           </p>
         </div>
         <div className={styles.card}>

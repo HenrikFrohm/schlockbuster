@@ -8,15 +8,22 @@
   cursor: pointer;
 }
 
+.header {
+  color: #b7903c;
+}
+
 .title {
   font-size: 22px;
   font-weight: 700;
+  color: #b7903c;
 }
 
 .genre {
   font-size: 18px;
   font-weight: 500;
+  color: white;
 }
 
 .description {
+  color: white;
 }

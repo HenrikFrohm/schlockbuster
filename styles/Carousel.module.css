@@ -1,19 +1,18 @@
 .container {
-  height: calc(100vh - 250px);
-  padding-top: 15px;
+  height: calc(100vh - 120px);
+  padding-top: 18px;
+  padding-bottom: 20px;
   border: 0;
   border-bottom: 0.1px;
-  border-color: black;
+  border-color: white;
   border-style: groove;
   overflow: hidden;
 }
 
 .arrowContainer {
   position: absolute;
-  width: 10%;
-  height: 20%;
   top: 0;
-  bottom: 34%;
+  bottom: 12%;
   margin: auto;
   cursor: pointer;
   z-index: 2;
@@ -21,8 +20,8 @@
 
 .wrapper {
   display: flex;
-  width: 300vw;
-  height: 60%;
+  width: 299vw;
+  height: 70%;
 }
 
 .imgContainer {
@@ -34,11 +33,15 @@
 .textContainer {
   display: flex;
   justify-content: center;
-
   text-align: center;
   flex-direction: column;
   padding: 5px 28%;
   margin-top: -10px;
+  color: white;
+}
+
+.title {
+  color: #b7903c;
 }
 
 .description {
@@ -52,15 +55,11 @@
   align-items: center;
   text-align: center;
   flex-direction: column;
+  font-weight: 700;
+  line-height: 27px;
 }
 
 .browse {
-}
-
-@media screen and (max-width: 1050px) {
-  .textContainer {
-    padding: 5px 22%;
-  }
 }
 
 @media screen and (min-width: 721px) {
@@ -72,41 +71,37 @@
   }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 1050px) {
+  .textContainer {
+    padding: 5px 22%;
+  }
+}
+
+@media screen and (max-width: 940px) {
   .container {
-    height: calc(100vh - 370px);
+    height: calc(100vh - 100px);
   }
   .wrapper {
     height: 50%;
   }
 
-  .arrowContainer {
-    width: 70px;
-    height: 60px;
-    right: 26em;
-    left: 26em;
-    top: 0;
-    bottom: 45%;
-  }
-}
-
-@media screen and (max-width: 670px) {
   .textContainer {
-    padding: 5px 15%;
+    padding: 3em 25%;
+  }
+
+  .arrowContainer {
+    width: 20px;
+    height: 10px;
+    right: 19em;
+    left: 13em;
+    bottom: -13%;
   }
 }
 
-@media screen and (max-width: 510px) {
-  .arrowContainer {
-    width: 50px;
-    height: 40px;
-    right: 3em;
-    left: 3em;
-    top: 0;
-    bottom: 45%;
-  }
+@media screen and (max-width: 800px) {
   .textContainer {
     font-size: 14px;
+    padding: 4em 25%;
   }
 }
 
