@@ -1,41 +1,77 @@
-import Image from "next/image";
-import styles from "../styles/Navbar.module.css";
-import { CartOutline } from "react-ionicons";
+import React from "react";
 
-const Navbar = () => {
-  return (
-    // main container for navbar, with children containers for items at different positions
-    <div className={styles.container}>
-      <div className={styles.itemLeft}>
-        <div className={styles.callButton}>
-          <Image src="/img/telephone.png" alt="" width="32" height="32" />
-        </div>
-        <div className={styles.texts}>
-          <div className={styles.text}>Need help?</div>
-          <div className={styles.text}>012 345 678</div>
-        </div>
-      </div>
-      <div className={styles.itemCenter}>
-        <ul className={styles.list}>
-          <li className={styles.listItem}>Home</li>
-          <li className={styles.listItem}>Genres</li>
-          <li className={styles.listItem}>Menu</li>
-          <div className={styles.logoText}>SCHLOCKBUSTER</div>
-          {/*  <Image src="/img/logo.png" alt="" width="160px" height="69px" /> */}
-          <li className={styles.listItem}>Community</li>
-          <li className={styles.listItem}>About</li>
-          <li className={styles.listItem}>Contact</li>
-        </ul>
-      </div>
-      <div className={styles.itemRight}>
-        <div className={styles.cart}>
-          <CartOutline height="25px" width="25px" color="white" />
-          {/*  <Image src="/img/cart.png" alt="" width="30px" height="30px" /> */}
-          <div className={styles.counter}>2</div>
-        </div>
-      </div>
-    </div>
-  );
+import Link from "next/link";
+
+import { slide as Menu } from "react-burger-menu";
+
+export default class Navbar extends React.Component {
+  showSettings(event) {
+    event.preventDefault();
+  }
+
+  render() {
+    // NOTE: You also need to provide styles, see https://github.com/negomi/react-burger-menu#styling
+    return (
+      <Menu>
+        <Link id="home" className="menu-item" href="/">
+          Home
+        </Link>
+        <Link id="about" className="menu-item" href="/about">
+          About
+        </Link>
+        <Link id="contact" className="menu-item" href="/contact">
+          Contact
+        </Link>
+        <Link onClick={this.showSettings} className="menu-item--small" href="">
+          Settings
+        </Link>
+      </Menu>
+    );
+  }
+}
+var styles = {
+  bmBurgerButton: {
+    position: "fixed",
+    width: "36px",
+    height: "30px",
+    left: "36px",
+    top: "36px",
+  },
+  bmBurgerBars: {
+    background: "#373a47",
+  },
+  bmBurgerBarsHover: {
+    background: "#a90000",
+  },
+  bmCrossButton: {
+    height: "24px",
+    width: "24px",
+  },
+  bmCross: {
+    background: "#bdc3c7",
+  },
+  bmMenuWrap: {
+    position: "fixed",
+    height: "100%",
+  },
+  bmMenu: {
+    background: "#373a47",
+    padding: "2.5em 1.5em 0",
+    fontSize: "1.15em",
+  },
+  bmMorphShape: {
+    fill: "#373a47",
+  },
+  bmItemList: {
+    color: "#b8b7ad",
+    padding: "0.8em",
+  },
+  bmItem: {
+    display: "inline-block",
+  },
+  bmOverlay: {
+    background: "rgba(0, 0, 0, 0.3)",
+  },
 };
 
-export default Navbar;
+<Menu styles={styles} />;
