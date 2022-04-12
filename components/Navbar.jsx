@@ -1,77 +1,58 @@
-import React from "react";
-
+import React, { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
+import styles from "../styles/Navbar.module.css";
+import { CartOutline } from "react-ionicons";
+import { MenuOutlined, Close } from "@material-ui/icons";
 
-import { slide as Menu } from "react-burger-menu";
+const Navbar = () => {
+  const [active, setActive] = useState(false);
 
-export default class Navbar extends React.Component {
-  showSettings(event) {
-    event.preventDefault();
-  }
+  const showMenu = () => {
+    setActive(!active);
+  };
+  return (
+    <div className={styles.container}>
+      <div className={styles.menuIcon}>
+        <MenuOutlined className={styles.menu} onClick={showMenu} />
+      </div>
 
-  render() {
-    // NOTE: You also need to provide styles, see https://github.com/negomi/react-burger-menu#styling
-    return (
-      <Menu>
-        <Link id="home" className="menu-item" href="/">
-          Home
-        </Link>
-        <Link id="about" className="menu-item" href="/about">
-          About
-        </Link>
-        <Link id="contact" className="menu-item" href="/contact">
-          Contact
-        </Link>
-        <Link onClick={this.showSettings} className="menu-item--small" href="">
-          Settings
-        </Link>
-      </Menu>
-    );
-  }
-}
-var styles = {
-  bmBurgerButton: {
-    position: "fixed",
-    width: "36px",
-    height: "30px",
-    left: "36px",
-    top: "36px",
-  },
-  bmBurgerBars: {
-    background: "#373a47",
-  },
-  bmBurgerBarsHover: {
-    background: "#a90000",
-  },
-  bmCrossButton: {
-    height: "24px",
-    width: "24px",
-  },
-  bmCross: {
-    background: "#bdc3c7",
-  },
-  bmMenuWrap: {
-    position: "fixed",
-    height: "100%",
-  },
-  bmMenu: {
-    background: "#373a47",
-    padding: "2.5em 1.5em 0",
-    fontSize: "1.15em",
-  },
-  bmMorphShape: {
-    fill: "#373a47",
-  },
-  bmItemList: {
-    color: "#b8b7ad",
-    padding: "0.8em",
-  },
-  bmItem: {
-    display: "inline-block",
-  },
-  bmOverlay: {
-    background: "rgba(0, 0, 0, 0.3)",
-  },
+      <nav className={active ? styles["slider.active"] : styles["slider"]}>
+        <ul className={styles.ul}>
+          <div className={styles.closed}>
+            <Close className={styles.close} onClick={showMenu} />
+          </div>
+          <li className={styles.li}>
+            <h2 className={styles.name}>
+              <Link href="/">Schlockbuster </Link>
+            </h2>
+          </li>
+          <li className={styles.li}>
+            <Link href="/">Home</Link>
+          </li>
+          <li className={styles.li}>
+            <Link href="/">Genres</Link>
+          </li>
+          <li className={styles.li}>
+            <Link href="/">Community</Link>
+          </li>
+          <li className={styles.li}>
+            <Link href="/">About</Link>
+          </li>
+          <li className={styles.li}>
+            <Link href="/">Contact</Link>
+          </li>
+          <li className={styles.li}>
+            <div className={styles.cart}>
+              <CartOutline height="25px" width="25px" color="white" />
+              {/*  <Image src="/img/cart.png" alt="" width="30px" height="30px" /> */}
+              <div className={styles.counter}>2</div>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  );
 };
 
-<Menu styles={styles} />;
+export default Navbar;
