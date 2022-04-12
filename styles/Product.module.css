@@ -22,3 +22,43 @@
   height: 80%;
   position: relative;
 }
+
+.options {
+  display: flex;
+  justify-content: space-between;
+  width: 40%;
+  cursor: pointer;
+}
+
+.title {
+  color: #b7903c;
+  font-weight: 700;
+}
+
+.genre {
+  font-weight: 500;
+}
+
+.platform {
+  display: flex;
+  font-size: 14px;
+  padding: 0 5px;
+  border-radius: 10px;
+  background-color: rgb(36, 36, 36);
+  color: #b7903c;
+  font-weight: 700;
+}
+
+.quantity {
+  width: 50px;
+  height: 30px;
+  margin-top: 30px;
+}
+
+.button {
+  height: 30px;
+  margin-left: 10px;
+  color: white;
+  background-color: black;
+  cursor: pointer;
+}
