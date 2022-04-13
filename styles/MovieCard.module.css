@@ -14,16 +14,78 @@
 
 .title {
   font-size: 22px;
-  font-weight: 700;
+  font-weight: 800;
   color: #b7903c;
 }
 
 .genre {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 500;
   color: white;
 }
 
 .description {
+  font-size: 17px;
   color: white;
+}
+
+@media screen and (max-width: 1300px) {
+  .container {
+    width: 30%;
+  }
+  .title {
+    font-size: 160%;
+  }
+  .genre {
+    font-size: 120%;
+  }
+  .description {
+    font-size: 105%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .container {
+    width: 50%;
+  }
+  .title {
+    font-size: 170%;
+  }
+  .genre {
+    font-size: 130%;
+  }
+  .description {
+    font-size: 110%;
+  }
+}
+
+@media screen and (max-width: 610px) {
+  .container {
+    width: 75%;
+    text-align: center;
+  }
+  .title {
+    font-size: 180%;
+  }
+  .genre {
+    font-size: 140%;
+  }
+  .description {
+    font-size: 115%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    width: 100%;
+  }
+  .title {
+    font-size: 190%;
+  }
+  .genre {
+    font-size: 150%;
+  }
+  .description {
+    font-size: 120%;
+  }
 }

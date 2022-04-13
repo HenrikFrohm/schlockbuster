@@ -21,3 +21,9 @@
   justify-content: center;
   width: 100%;
 }
+
+@media screen and (max-width: 610px) {
+  .title {
+    text-align: center;
+  }
+}

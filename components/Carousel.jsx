@@ -31,7 +31,7 @@ const Carousel = () => {
         style={{ left: 210 }}
         onClick={() => handleArrow("l")}
       >
-        <ArrowBackOutline alt="" height="50px" width="50px" color="#b7903c" />
+        <ArrowBackOutline alt="" height="50px" width="50px" color="white" />
       </div>
       {/* css function to reposition element horizontally at correct size when onclick event is executed */}
       <div
@@ -50,12 +50,7 @@ const Carousel = () => {
         style={{ right: 180 }}
         onClick={() => handleArrow("r")}
       >
-        <ArrowForwardOutline
-          alt=""
-          height="50px"
-          width="50px"
-          color="#b7903c"
-        />
+        <ArrowForwardOutline alt="" height="50px" width="50px" color="white" />
       </div>
 
       <div className={styles.textContainer}>

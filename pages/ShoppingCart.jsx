@@ -8,7 +8,7 @@ const shoppingcart = () => {
       <div className={styles.left}>
         {/* table with one header- and one data row */}
         <table className={styles.table}>
-          <tr className={styles.tr}>
+          <tr className={styles.trTitle}>
             <th>Product</th>
             <th>Title</th>
             <th>Video Platform</th>
@@ -16,14 +16,14 @@ const shoppingcart = () => {
             <th>Quantity</th>
             <th>Total</th>
           </tr>
-          <tr>
+          <tr className={styles.tr}>
             <td>
               <div className={styles.imgContainer}>
                 <Image
                   src="/img/i03_Troll2.jpg"
                   alt="Movie Image"
                   layout="fill"
-                  objectFit="cover"
+                  objectFit="contain"
                 ></Image>
               </div>
             </td>
@@ -43,14 +43,14 @@ const shoppingcart = () => {
               <span className={styles.total}>€6</span>
             </td>
           </tr>
-          <tr>
+          <tr className={styles.tr}>
             <td>
               <div className={styles.imgContainer}>
                 <Image
                   src="/img/i01_TheRoom.jpg"
                   alt="Movie Image"
                   layout="fill"
-                  objectFit="cover"
+                  objectFit="contain"
                 ></Image>
               </div>
             </td>
@@ -76,7 +76,7 @@ const shoppingcart = () => {
         <div className={styles.wrapper}>
           <h2 className={styles.totalTitle}>CART TOTAL</h2>
           <div className={styles.totalText}>
-            <b className={styles.totalTextTitle}>Total: </b>€24
+            <b className={styles.totalTextTitle}>Total: €24</b>
           </div>
           <button className={styles.button}>CHECKOUT</button>
         </div>

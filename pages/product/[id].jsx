@@ -12,7 +12,7 @@ const Product = () => {
     title: "Troll 2",
     genre: "Horror/Comedy",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, illum nisi quo optio reprehenderit odio et aliquam suscipit consectetur ipsam deleniti debitis voluptas quam incidunt dignissimos repudiandae quis cum neque.",
+      "A vacationing family discovers that the entire town they're visiting is inhabited by goblins, disguised as humans, who plan to eat them.",
     priceRent: [2, 3, 4],
     priceBuy: [4, 5, 6],
   };
@@ -34,15 +34,17 @@ const Product = () => {
         <p className={styles.description}>Description: {movie.description}</p>
         <span className={styles.priceRent}>
           {/* defaults to first num for the two objects in the array, changing when different video platform option gets picked */}
-          Rent: {movie.priceRent[price]}€
+          <strong> Rent: {movie.priceRent[price]}€</strong>
         </span>
         <br />
-        <span className={styles.priceBuy}>Buy: {movie.priceBuy[price]}€</span>
+        <span className={styles.priceBuy}>
+          <strong> Buy: {movie.priceBuy[price]}€</strong>
+        </span>
         <h4>Choose video platform</h4>
         <div className={styles.options}>
           {/* onclick event, lettings users pick movie platform. Default (0) is VHS. */}
           <div className={styles.platform} onClick={() => setPrice(0)}>
-            VHS
+            VHS&nbsp;
             <Image
               src="/img/vhs.png"
               alt="VHS option"
@@ -51,7 +53,7 @@ const Product = () => {
             />
           </div>
           <div className={styles.platform} onClick={() => setPrice(1)}>
-            DVD
+            DVD&nbsp;
             <Image
               src="/img/dvd.png"
               alt="DVD option"
@@ -60,7 +62,7 @@ const Product = () => {
             />
           </div>
           <div className={styles.platform} onClick={() => setPrice(2)}>
-            Bluray
+            BLURAY&nbsp;
             <Image
               src="/img/bluray.ico"
               alt="Bluray option"

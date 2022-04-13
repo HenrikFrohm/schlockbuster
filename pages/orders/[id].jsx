@@ -5,7 +5,7 @@ import styles from "../../styles/Order.module.css";
 const Order = () => {
   const status = 0;
 
-  //providing status for index on statusClasses with if statements, resulting in changed icon. Will be fetched later.
+  //providing status for index on statusClasses with if statements, resulting in changed icons. Will be fetched later.
   const statusClass = (index) => {
     if (index - status < 1) return styles.done;
     if (index - status === 1) return styles.inProgress;
