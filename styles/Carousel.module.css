@@ -98,6 +98,12 @@
   }
 }
 
+@media screen and (max-width: 900px) {
+  .arrowContainer {
+    bottom: -5%;
+  }
+}
+
 @media screen and (max-width: 800px) {
   .textContainer {
     font-size: 14px;
