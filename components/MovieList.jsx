@@ -6,6 +6,7 @@ const MovieList = () => {
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>Featured movies</h1>
+      {/* wrapper  */}
       <div className={styles.wrapper}>
         <MovieCard />
         <MovieCard />

@@ -30,8 +30,8 @@ const Product = () => {
       </div>
       <div className={styles.right}>
         <h1 className={styles.title}>{movie.title}</h1>
-        <p className={styles.genre}>Genre: {movie.genre}</p>
-        <p className={styles.description}>Description: {movie.description}</p>
+        <p className={styles.genre}>{movie.genre}</p>
+        <p className={styles.description}>{movie.description}</p>
         <span className={styles.priceRent}>
           {/* defaults to first num for the two objects in the array, changing when different video platform option gets picked */}
           <strong> Rent: {movie.priceRent[price]}€</strong>
