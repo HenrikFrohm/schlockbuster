@@ -1,16 +1,18 @@
+import { Movie } from "@material-ui/icons";
 import Image from "next/image";
 import styles from "../styles/MovieCard.module.css";
+import Link from "next/link";
 
-const MovieCard = () => {
+//using prop to fetch data from mongodb for title, genre and more.
+const MovieCard = ({ movie }) => {
   return (
     <div className={styles.container}>
-      <Image src="/img/i03_Troll2.jpg" alt="" width="400" height="500" />
-      <h1 className={styles.title}>Movie title</h1>
-      <span className={styles.genre}>Genre</span>
-      <p className={styles.description}>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat, eum
-        facere.
-      </p>
+      <Link href={`/product/${movie._id}`} passHref>
+        <Image src={movie.img} alt="" width="400" height="500" />
+      </Link>
+      <h1 className={styles.title}>{movie.title}</h1>
+      <span className={styles.genre}>{movie.genre}</span>
+      <p className={styles.description}>{movie.description}</p>
     </div>
   );
 };

@@ -3,19 +3,10 @@ import Image from "next/image";
 import styles from "../../styles/Product.module.css";
 
 // array for movie details and options
-const Product = () => {
+const Product = ({ movie }) => {
   // using useState/state hook to change value/price when different platforms are picked
   const [price, setPrice] = useState(0);
-  const movie = {
-    id: 1,
-    img: "/img/i03_Troll2.jpg",
-    title: "Troll 2",
-    genre: "Horror/Comedy",
-    description:
-      "A vacationing family discovers that the entire town they're visiting is inhabited by goblins, disguised as humans, who plan to eat them.",
-    priceRent: [2, 3, 4],
-    priceBuy: [4, 5, 6],
-  };
+
   return (
     <div className={styles.container}>
       <div className={styles.left}>
@@ -78,6 +69,16 @@ const Product = () => {
       </div>
     </div>
   );
+};
+
+export const getServerSideProps = async (params) => {
+  const res = await axios.get(`http://localhost:3000/api/products/${params}`);
+  //pass data to pages/components via props
+  return {
+    props: {
+      movie: res.data,
+    },
+  };
 };
 
 export default Product;

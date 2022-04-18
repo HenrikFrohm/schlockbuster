@@ -13,10 +13,14 @@ const ProductSchema = new mongoose.Schema(
       required: true,
       maxlength: 60,
     },
+    img: {
+      type: String,
+      required: true,
+    },
     description: {
       type: String,
       required: true,
-      maxlength: 200,
+      maxlength: 500,
     },
     //type is array, limited to num
     priceRent: {
