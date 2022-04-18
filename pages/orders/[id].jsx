@@ -19,7 +19,7 @@ const Order = () => {
             <tr className={styles.trTitle}>
               <th>Order ID</th>
               <th>Customer</th>
-              <th>Adress</th>
+              <th>Address</th>
               <th>Total</th>
             </tr>
             <tr className={styles.tr}>

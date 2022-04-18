@@ -1,20 +1,46 @@
 import mongoose from "mongoose";
 
 //schema that defines product
-const ProductSchema = new mongoose.Schema({
-  title: {
-    type: String,
-    required: true,
-    maxlength: 60,
+const ProductSchema = new mongoose.Schema(
+  {
+    title: {
+      type: String,
+      required: true,
+      maxlength: 60,
+    },
+    genre: {
+      type: String,
+      required: true,
+      maxlength: 60,
+    },
+    description: {
+      type: String,
+      required: true,
+      maxlength: 200,
+    },
+    //type is array, limited to num
+    priceRent: {
+      type: [Number],
+      required: true,
+    },
+    priceBuy: {
+      type: [Number],
+      required: true,
+    },
+    //array that includes choosable objects that'll change the price
+    platform: {
+      type: [
+        {
+          text: { type: String, required: true },
+          price: { type: Number, required: true },
+        },
+      ],
+    },
   },
-  genre: {
-    type: String,
-    required: true,
-    maxlength: 60,
-  },
-  description: {
-    type: String,
-    required: true,
-    maxlength: 200,
-  },
-});
+  { timestamps: true }
+);
+
+//if product doesn't exists in mongodb database, create it. Otherwise don't create it again.
+//mongodb database will also be created if it doesn't exist.
+export default mongoose.models.Product ||
+  mongoose.model("Product", ProductSchema);
