@@ -18,6 +18,13 @@
   color: #b7903c;
 }
 
+.price {
+  font-size: 20px;
+  font-weight: 500;
+  color: white;
+  padding-bottom: 15px;
+}
+
 .genre {
   font-size: 20px;
   font-weight: 500;

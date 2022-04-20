@@ -23,11 +23,7 @@ const ProductSchema = new mongoose.Schema(
       maxlength: 500,
     },
     //type is array, limited to num
-    priceRent: {
-      type: [Number],
-      required: true,
-    },
-    priceBuy: {
+    prices: {
       type: [Number],
       required: true,
     },

@@ -1,4 +1,3 @@
-import { Movie } from "@material-ui/icons";
 import Image from "next/image";
 import styles from "../styles/MovieCard.module.css";
 import Link from "next/link";
@@ -11,6 +10,7 @@ const MovieCard = ({ movie }) => {
         <Image src={movie.img} alt="" width="400" height="500" />
       </Link>
       <h1 className={styles.title}>{movie.title}</h1>
+      <span className={styles.price}>€{movie.prices[0]}</span>
       <span className={styles.genre}>{movie.genre}</span>
       <p className={styles.description}>{movie.description}</p>
     </div>

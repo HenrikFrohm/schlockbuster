@@ -1,8 +1,7 @@
-import React from "react";
 import Image from "next/image";
-import styles from "../styles/Shoppingcart.module.css";
+import styles from "../styles/ShoppingCart.module.css";
 
-const Shoppingcart = () => {
+const ShoppingCart = () => {
   return (
     <div className={styles.container}>
       <div className={styles.left}>
@@ -85,4 +84,4 @@ const Shoppingcart = () => {
   );
 };
 
-export default Shoppingcart;
+export default ShoppingCart;
