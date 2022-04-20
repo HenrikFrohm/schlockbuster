@@ -6,7 +6,7 @@ const cartSlice = createSlice({
   //state at the beginning
   initialState: {
     products: [],
-    quantity,
+    quantity: 0,
     total: 0,
   },
   //most important redux concept, reducers take current state and an action - an event that describes something that happened in the application - as arguments and returns a new state result. Passing products as a payload

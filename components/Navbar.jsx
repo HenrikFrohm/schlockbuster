@@ -4,6 +4,7 @@ import Link from "next/link";
 import styles from "../styles/Navbar.module.css";
 import { CartOutline } from "react-ionicons";
 import { MenuOutlined, Close } from "@material-ui/icons";
+import { useSelector } from "react-redux";
 
 const Navbar = () => {
   // useState for when hamburger menu will open or not.
@@ -12,6 +13,8 @@ const Navbar = () => {
   const showMenu = () => {
     setActive(!active);
   };
+
+  const quantity = useSelector((state) => state.cart.quantity);
   return (
     <div className={styles.container}>
       <div className={styles.menuIcon}>
@@ -44,7 +47,7 @@ const Navbar = () => {
           <div className={styles.cart}>
             <CartOutline height="25px" width="25px" color="white" />
             {/*  <Image src="/img/cart.png" alt="" width="30px" height="30px" /> */}
-            <div className={styles.counter}>2</div>
+            <div className={styles.counter}>{quantity}</div>
           </div>
         </ul>
       </nav>
