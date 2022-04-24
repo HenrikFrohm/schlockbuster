@@ -45,11 +45,13 @@ const Navbar = () => {
           <li className={styles.li}>
             <Link href="/">CONTACT</Link>
           </li>
-          <div className={styles.cart}>
-            <CartOutline height="25px" width="25px" color="white" />
-            {/*  <Image src="/img/cart.png" alt="" width="30px" height="30px" /> */}
-            <div className={styles.counter}>{quantity}</div>
-          </div>
+          <Link href="/shoppingcart" passHref>
+            <div className={styles.cart}>
+              <CartOutline height="25px" width="25px" color="white" />
+              {/*  <Image src="/img/cart.png" alt="" width="30px" height="30px" /> */}
+              <div className={styles.counter}>{quantity}</div>
+            </div>
+          </Link>
         </ul>
       </nav>
     </div>
