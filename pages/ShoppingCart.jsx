@@ -1,7 +1,10 @@
 import Image from "next/image";
+import { useDispatch, useSelector } from "react-redux";
 import styles from "../styles/ShoppingCart.module.css";
 
 const ShoppingCart = () => {
+  const dispatch = useDispatch();
+  const cart = useSelector((state) => state.cart);
   return (
     <div className={styles.container}>
       <div className={styles.left}>
@@ -15,60 +18,35 @@ const ShoppingCart = () => {
             <th>Quantity</th>
             <th>Total</th>
           </tr>
-          <tr className={styles.tr}>
-            <td>
-              <div className={styles.imgContainer}>
-                <Image
-                  src="/img/i03_Troll2.jpg"
-                  alt="Movie Image"
-                  layout="fill"
-                  objectFit="contain"
-                ></Image>
-              </div>
-            </td>
-            <td>
-              <span className={styles.title}>Troll 2</span>
-            </td>
-            <td>
-              <span className={styles.platform}>DVD</span>
-            </td>
-            <td>
-              <span className={styles.price}>€3</span>
-            </td>
-            <td>
-              <span className={styles.quantity}>2</span>
-            </td>
-            <td>
-              <span className={styles.total}>€6</span>
-            </td>
-          </tr>
-          <tr className={styles.tr}>
-            <td>
-              <div className={styles.imgContainer}>
-                <Image
-                  src="/img/i01_TheRoom.jpg"
-                  alt="Movie Image"
-                  layout="fill"
-                  objectFit="contain"
-                ></Image>
-              </div>
-            </td>
-            <td>
-              <span className={styles.title}>The Room</span>
-            </td>
-            <td>
-              <span className={styles.platform}>Bluray</span>
-            </td>
-            <td>
-              <span className={styles.price}>€6</span>
-            </td>
-            <td>
-              <span className={styles.quantity}>3</span>
-            </td>
-            <td>
-              <span className={styles.total}>€18</span>
-            </td>
-          </tr>
+          {cart.products.map((product) => (
+            <tr className={styles.tr} key={product._id}>
+              <td>
+                <div className={styles.imgContainer}>
+                  <Image
+                    src="/img/i03_Troll2.jpg"
+                    alt="Movie Image"
+                    layout="fill"
+                    objectFit="contain"
+                  ></Image>
+                </div>
+              </td>
+              <td>
+                <span className={styles.title}>Troll 2</span>
+              </td>
+              <td>
+                <span className={styles.platform}>DVD</span>
+              </td>
+              <td>
+                <span className={styles.price}>€3</span>
+              </td>
+              <td>
+                <span className={styles.quantity}>2</span>
+              </td>
+              <td>
+                <span className={styles.total}>€6</span>
+              </td>
+            </tr>
+          ))}
         </table>
       </div>
       <div className={styles.right}>

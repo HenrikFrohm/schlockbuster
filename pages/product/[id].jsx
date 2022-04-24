@@ -29,7 +29,7 @@ const Product = ({ movie }) => {
 
   //dispatch cart actions onclick
   const handleClick = () => {
-    dispatch(addProduct(...movie, price, quantity));
+    dispatch(addProduct({ ...movie, price, quantity }));
   };
 
   return (
