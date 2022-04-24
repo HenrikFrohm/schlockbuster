@@ -2,15 +2,18 @@ import React, { useState } from "react";
 import Image from "next/image";
 import styles from "../../styles/Product.module.css";
 import axios from "axios";
+import { useDispatch } from "react-redux";
+import { addProduct } from "../../redux/cartSlice";
 
 // array for movie details and options
 const Product = ({ movie }) => {
   // useState to get the price for the movie from db
   const [price, setPrice] = useState(movie.prices[0]);
-  // useState to start at the first price option for the movie from db
+  // useState to start at the first platform option for the movie from db
   const [platform, setPlatform] = useState(0);
   //useState to set default value for quantity to 1
   const [quantity, setQuantity] = useState(1);
+  const dispatch = useDispatch();
 
   //calculate price with chosen quantity and add to current value
   const changePrice = (number) => {
@@ -22,6 +25,11 @@ const Product = ({ movie }) => {
     const difference = movie.prices[platformIndex] - movie.prices[platform];
     setPlatform(platformIndex);
     changePrice(difference);
+  };
+
+  //dispatch cart actions onclick
+  const handleClick = () => {
+    dispatch(addProduct(...movie, price, quantity));
   };
 
   return (
@@ -77,7 +85,9 @@ const Product = ({ movie }) => {
         </div>
         <div className={styles.add}>
           <input type="number" defaultValue={1} className={styles.quantity} />
-          <button className={styles.button}>Add to Cart</button>
+          <button className={styles.button} onClick={handleClick}>
+            Add to Cart
+          </button>
         </div>
       </div>
     </div>

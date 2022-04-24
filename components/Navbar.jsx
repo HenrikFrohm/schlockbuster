@@ -14,6 +14,7 @@ const Navbar = () => {
     setActive(!active);
   };
 
+  //redux useSelector function to get data from store state then using it for counter component to get correct number of products displayed
   const quantity = useSelector((state) => state.cart.quantity);
   return (
     <div className={styles.container}>
