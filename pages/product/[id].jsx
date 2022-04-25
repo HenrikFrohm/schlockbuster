@@ -84,7 +84,12 @@ const Product = ({ movie }) => {
           </div>
         </div>
         <div className={styles.add}>
-          <input type="number" defaultValue={1} className={styles.quantity} />
+          <input
+            type="number"
+            onChange={(e) => setQuantity(e.target.value)}
+            defaultValue={1}
+            className={styles.quantity}
+          />
           <button className={styles.button} onClick={handleClick}>
             Add to Cart
           </button>

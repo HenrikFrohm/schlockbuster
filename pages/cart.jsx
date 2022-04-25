@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 import styles from "../styles/Cart.module.css";
+import { reset } from "../redux/cartSlice";
 import {
   PayPalScriptProvider,
   PayPalButtons,
@@ -10,10 +11,12 @@ import {
 } from "@paypal/react-paypal-js";
 
 const Cart = () => {
+  //setting useState false for payment options so they only show up after clicking on checkout button
   const [open, setOpen] = useState(false);
+  //dispatching redux actions
   const dispatch = useDispatch();
   const cart = useSelector((state) => state.cart);
-  //router hook
+  //useRouter hook used to handle client side order transitions
   const router = useRouter();
   // async function with try catch statement.
   const createOrder = async (data) => {
@@ -22,12 +25,13 @@ const Cart = () => {
       const res = axios.post("http://localhost:3000/api/orders", data);
       //if it's successfull it will go to the order page with order id
       res.status === 201 && router.push("/orders/" + res.data._id);
+      dispatch(reset());
     } catch (err) {
       console.log(err);
     }
   };
   // This values are the props in the UI for paypal
-  const amount = "2";
+  const amount = cart.total;
   const currency = "USD";
   const style = { layout: "vertical" };
 
@@ -75,6 +79,12 @@ const Cart = () => {
           onApprove={function (data, actions) {
             return actions.order.capture().then(function (details) {
               const shipping = details.purchase_units[0].shipping;
+              createOrder({
+                customer: shipping.name.full_name,
+                address: shipping.address.address_line_1,
+                total: cart.total,
+                method: 1,
+              });
             });
           }}
         />
