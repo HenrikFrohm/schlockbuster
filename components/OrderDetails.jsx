@@ -3,12 +3,12 @@ import React, { useState } from "react";
 import styles from "../styles/OrderDetails.module.css";
 
 // payment data for when the cash payment method option is picked by customer
-const OrderDetails = () => {
+const OrderDetails = (total, createOrder) => {
   const [customer, setCustomer] = useState("");
   const [address, setAddress] = useState("");
 
   const handleClick = () => {
-    createRouteLoader({ customer, address, total, method: 0 });
+    createOrder({ customer, address, total, method: 0 });
   };
   return (
     <div className={styles.container}>
