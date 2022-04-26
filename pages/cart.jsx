@@ -4,36 +4,42 @@ import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 import styles from "../styles/Cart.module.css";
 import { reset } from "../redux/cartSlice";
+import axios from "axios";
 import {
   PayPalScriptProvider,
   PayPalButtons,
   usePayPalScriptReducer,
 } from "@paypal/react-paypal-js";
+import OrderDetails from "../components/OrderDetails";
 
 const Cart = () => {
   //setting useState false for payment options so they only show up after clicking on checkout button
   const [open, setOpen] = useState(false);
+  const [cash, setCash] = useState(false);
   //dispatching redux actions
   const dispatch = useDispatch();
   const cart = useSelector((state) => state.cart);
   //useRouter hook used to handle client side order transitions
   const router = useRouter();
-  // async function with try catch statement.
+
+  // These values are the props in the UI for paypal
+  const amount = cart.total;
+  const currency = "EUR";
+  const style = { layout: "vertical" };
+
+  // async function with try catch statement. Make api post request to send data when using payment methods. If successful, dispatch reset action from redux, return 201 success status response and redirect/push customer to orderpage with order id
+  // if it fails, console log error
   const createOrder = async (data) => {
     try {
-      //response after creating order
-      const res = axios.post("http://localhost:3000/api/orders", data);
-      //if it's successfull it will go to the order page with order id
-      res.status === 201 && router.push("/orders/" + res.data._id);
-      dispatch(reset());
+      const res = await axios.post("http://localhost:3000/api/orders", data);
+      if (res.status === 201) {
+        dispatch(reset());
+        router.push(`/orders/${res.data._id}`);
+      }
     } catch (err) {
       console.log(err);
     }
   };
-  // This values are the props in the UI for paypal
-  const amount = cart.total;
-  const currency = "USD";
-  const style = { layout: "vertical" };
 
   // Custom component to wrap the PayPalButtons and handle currency changes
   const ButtonWrapper = ({ currency, showSpinner }) => {
@@ -153,13 +159,19 @@ const Cart = () => {
           </div>
           {open ? (
             <div className={styles.paymentMethods}>
-              <button className={styles.payButton}>CASH ON DELIVERY</button>
+              {/* when clicking button, useState is set to true and modal will open */}
+              <button
+                className={styles.payButton}
+                onClick={() => setCash(true)}
+              >
+                CASH ON DELIVERY
+              </button>
               <PayPalScriptProvider
                 options={{
                   "client-id":
                     "AeeairOUrMyi9AG8UDPhRupua1BDOcTV_9zPuiTGeRibQPtKv4ktdnEYOZm39tajPtS9E_Vdo-oHA1lQ",
                   components: "buttons",
-                  currency: "USD",
+                  currency: "EUR",
                   "disable-funding": "credit,card,p24",
                 }}
               >
@@ -171,9 +183,10 @@ const Cart = () => {
               CHECKOUT
             </button>
           )}
-          {/* choose option to remove other payment methods other than Paypal */}
         </div>
       </div>
+      {/* condition for when cash payment method button is clicked, orderdetails component is called with createOrder function and cart, passing order data*/}
+      {cash && <OrderDetails total={cart.total} createOrder={createOrder} />}
     </div>
   );
 };

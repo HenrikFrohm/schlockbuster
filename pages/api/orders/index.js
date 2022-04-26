@@ -2,7 +2,7 @@ import dbConnect from "../../../utilities/mongo";
 import Order from "../../../models/Order";
 
 //Request handler used to make API routes work and handle HTTP methods with req method. Async function to always return a promise.
-export default async function handler(req, res) {
+const handler = async (req, res) => {
   const { method } = req;
 
   await dbConnect();
@@ -21,9 +21,10 @@ export default async function handler(req, res) {
     try {
       const order = await Order.create(req.body);
       res.status(201).json(order);
-      //catch block, if there's an error, return 500 page
     } catch (err) {
       res.status(500).json(err);
     }
   }
-}
+};
+
+export default handler;

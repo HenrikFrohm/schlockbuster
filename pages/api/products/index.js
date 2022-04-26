@@ -5,7 +5,7 @@ import Product from "../../../models/Product";
 export default async function handler(req, res) {
   const { method } = req;
 
-  await dbConnect();
+  dbConnect();
 
   // GET request with async process to get products from db, or find a specific with title, description and so forth.
   if (method === "GET") {
@@ -21,7 +21,6 @@ export default async function handler(req, res) {
     try {
       const product = await Product.create(req.body);
       res.status(201).json(product);
-      //catch block, if there's an error, return 500 page
     } catch (err) {
       res.status(500).json(err);
     }

@@ -1,9 +1,10 @@
 import React from "react";
 import Image from "next/image";
 import styles from "../../styles/Order.module.css";
+import axios from "axios";
 
-const Order = () => {
-  const status = 0;
+const Order = ({ order }) => {
+  const status = order.status;
 
   //providing status for index on statusClasses with if statements, resulting in changed icons. Will be fetched later.
   const statusClass = (index) => {
@@ -24,16 +25,16 @@ const Order = () => {
             </tr>
             <tr className={styles.tr}>
               <td>
-                <span className={styles.id}>15235234</span>
+                <span className={styles.id}>{order._id}</span>
               </td>
               <td>
-                <span className={styles.name}>Rich Evans</span>
+                <span className={styles.name}>{order.customer}</span>
               </td>
               <td>
-                <span className={styles.address}>€3</span>
+                <span className={styles.address}>{order.address}</span>
               </td>
               <td>
-                <span className={styles.total}>€6</span>
+                <span className={styles.total}>€{order.total}</span>
               </td>
             </tr>
           </table>
@@ -84,7 +85,7 @@ const Order = () => {
         <div className={styles.wrapper}>
           <h2 className={styles.totalTitle}>CART TOTAL</h2>
           <div className={styles.totalText}>
-            <b className={styles.totalTextTitle}>Total: </b>€24
+            <b className={styles.totalTextTitle}>Total: </b>€{order.total}
           </div>
           <button className={styles.button} disabled>
             PAID
@@ -93,6 +94,13 @@ const Order = () => {
       </div>
     </div>
   );
+};
+
+export const getServerSideProps = async ({ params }) => {
+  const res = await axios.get(`http://localhost:3000/api/orders/${params.id}`);
+  return {
+    props: { order: res.data },
+  };
 };
 
 export default Order;
