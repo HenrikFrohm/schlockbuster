@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import styles from "../styles/Footer.module.css";
 
 const Footer = () => {
@@ -20,8 +21,12 @@ const Footer = () => {
         </div>
         <div className={styles.card}>
           <h1 className={styles.title}>EXPLORE</h1>
-          <p className={styles.link}>ABOUT</p>
-          <p className={styles.link}>GENRES</p>
+          <p className={styles.link}>
+            <Link href="/About">ABOUT</Link>
+          </p>
+          <p className={styles.link}>
+            <Link href="/Community">COMMUNITY</Link>
+          </p>
           <p className={styles.link}>CONTACT</p>
         </div>
         <div className={styles.card}>

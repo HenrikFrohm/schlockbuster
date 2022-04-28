@@ -27,6 +27,10 @@ const Product = ({ movie }) => {
     changePrice(difference);
   };
 
+  const handleChange = (e, option) => {
+    const checked = e.target.checked;
+  };
+
   //dispatch cart actions onclick
   const handleClick = () => {
     dispatch(addProduct({ ...movie, price, quantity }));
@@ -46,11 +50,24 @@ const Product = ({ movie }) => {
       </div>
       <div className={styles.right}>
         <h1 className={styles.title}>{movie.title}</h1>
-        <p className={styles.genre}>{movie.genre}</p>
-        <p className={styles.description}>{movie.description}</p>
+        <div className={styles.wrapper}>
+          <p className={styles.date}>
+            <strong>Date:</strong> <br />
+            {movie.date}
+          </p>
+          <p className={styles.genre}>
+            <strong>Genre:</strong> <br />
+            {movie.genre}
+          </p>
+        </div>
+        <p className={styles.description}>
+          <strong>Description:</strong> <br />
+          {movie.description}
+        </p>
         <span className={styles.price}>
           {/* defaults to first num for the two objects in the array, changing when different video platform option gets picked */}
-          <strong> Price: €{price}</strong>
+          <strong> Price: </strong>
+          <br />€{price}
         </span>
         <h4>Choose video platform</h4>
         <div className={styles.platforms}>

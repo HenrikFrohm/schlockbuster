@@ -24,12 +24,13 @@
   font-weight: 700;
 }
 
-.genre {
-  font-weight: 500;
+.wrapper {
+  display: flex;
+  gap: 15px;
 }
 
 .description {
-  width: 50%;
+  width: 70%;
 }
 
 .imgContainer {
@@ -83,6 +84,17 @@
     height: 70vh;
   }
 
+  .wrapper {
+    flex-direction: column;
+    justify-content: center;
+    gap: unset;
+  }
+
+  .description {
+    width: 50%;
+    margin-left: 24%;
+  }
+
   .platforms {
     width: 120px;
     flex-direction: column;
@@ -94,13 +106,8 @@
     font-size: 16px;
   }
 
-  .description {
-    width: 400px;
-  }
-
   .quantity,
   .button {
     height: 50px;
-    padding: 10px 20px;
   }
 }

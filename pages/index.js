@@ -1,7 +1,6 @@
 import axios from "axios";
 import Head from "next/head";
 
-import { useEffect } from "react";
 import Carousel from "../components/Carousel";
 import MovieList from "../components/MovieList";
 import styles from "../styles/Home.module.css";

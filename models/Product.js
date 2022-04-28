@@ -8,6 +8,11 @@ const ProductSchema = new mongoose.Schema(
       required: true,
       maxlength: 60,
     },
+    date: {
+      type: Number,
+      required: true,
+      maxlength: 5,
+    },
     genre: {
       type: String,
       required: true,

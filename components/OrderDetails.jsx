@@ -1,9 +1,8 @@
-import { createRouteLoader } from "next/dist/client/route-loader";
 import React, { useState } from "react";
 import styles from "../styles/OrderDetails.module.css";
 
 // payment data for when the cash payment method option is picked by customer
-const OrderDetails = (total, createOrder) => {
+const OrderDetails = ({ total, createOrder }) => {
   const [customer, setCustomer] = useState("");
   const [address, setAddress] = useState("");
 

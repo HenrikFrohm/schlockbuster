@@ -122,6 +122,7 @@ const Cart = () => {
                       alt="Movie Image"
                       layout="fill"
                       objectFit="contain"
+                      objectPosition="right"
                     ></Image>
                   </div>
                 </td>

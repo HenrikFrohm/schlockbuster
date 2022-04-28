@@ -37,6 +37,11 @@
   color: lightgray;
 }
 
+.link:hover {
+  color: white;
+  opacity: 1;
+}
+
 .logo {
   font-size: 24px;
   color: #b7903c;

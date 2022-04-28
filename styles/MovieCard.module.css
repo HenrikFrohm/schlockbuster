@@ -5,17 +5,22 @@
   justify-content: center;
   text-align: left;
   padding: 20px;
-  cursor: pointer;
 }
 
-.header {
-  color: #b7903c;
+.image {
+  cursor: pointer;
 }
 
 .title {
   font-size: 22px;
   font-weight: 800;
   color: #b7903c;
+  cursor: pointer;
+}
+
+.title:hover {
+  color: white;
+  opacity: 1;
 }
 
 .price {
