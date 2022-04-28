@@ -18,6 +18,7 @@
   bottom: none;
   padding: 5px;
   cursor: pointer;
+  color: white;
 }
 
 .button:first-child {

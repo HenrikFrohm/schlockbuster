@@ -6,6 +6,7 @@ const OrderDetails = ({ total, createOrder }) => {
   const [customer, setCustomer] = useState("");
   const [address, setAddress] = useState("");
 
+  //passing items for createOrder function that will be called in cart.jsx after pressing the cash payment method button.
   const handleClick = () => {
     createOrder({ customer, address, total, method: 0 });
   };
