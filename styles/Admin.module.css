@@ -1,0 +1,30 @@
+.container {
+  display: flex;
+  padding: 50px;
+  color: white;
+}
+
+.item {
+  flex: 1;
+}
+
+.table {
+  width: 100%;
+  border-spacing: 20px;
+  text-align: left;
+}
+
+.button {
+  bottom: none;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.button:first-child {
+  background-color: green;
+  margin-right: 10px;
+}
+
+.button:last-child {
+  background-color: red;
+}
