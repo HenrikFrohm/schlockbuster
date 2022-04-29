@@ -6,6 +6,10 @@ import axios from "axios";
 const Index = ({ orders, products }) => {
   const [movieList, setMovieList] = useState(products);
   const [orderList, setOrderList] = useState(orders);
+  {
+    /* status array that will be used in one td in the orderList */
+  }
+  const status = ["preparing", "sending", "delivered"];
   //function to delete product when clicking the delete button
   const handleDelete = async (id) => {
     try {
@@ -31,6 +35,8 @@ const Index = ({ orders, products }) => {
               <th>Action</th>
             </tr>
           </tbody>
+          {/* map function to return tbody for each product and render list */}
+          {/* including the string attribute key in tbody, used when creating list of elements and to uniquely identify a list item among it's siblings */}
           {movieList.map((product) => (
             <tbody key={product._id}>
               <tr className={styles.trTitle}>
@@ -74,19 +80,24 @@ const Index = ({ orders, products }) => {
               <th>Action</th>
             </tr>
           </tbody>
-          <tbody>
-            <tr className={styles.trTitle}>
-              <td>3123132</td>
-              <td>Rich Evans</td>
-              <td>€50</td>
-              <td>paid</td>
-              <td>preparing</td>
-              <td>€50</td>
-              <td>
-                <button>Next stage</button>
-              </td>
-            </tr>
-          </tbody>
+          {/* Same map function as previous one, except now for order */}
+          {orderList.map((order) => (
+            <tbody key={order._id}>
+              <tr className={styles.trTitle}>
+                <td>{order._id}</td>
+                <td>{order.customer}</td>
+                <td>€{order.total}</td>
+                {/* condition, check payment method. If it is 0, show first span. If it is not, show second span*/}
+                <td>
+                  {order.method === 0 ? <span>cash</span> : <span>paid</span>}
+                </td>
+                <td>{status[order.status]}</td>
+                <td>
+                  <button>Next stage</button>
+                </td>
+              </tr>
+            </tbody>
+          ))}
         </table>
       </div>
     </div>

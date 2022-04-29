@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import styles from "../../styles/Order.module.css";
 import axios from "axios";
+import { CutOutline } from "react-ionicons";
 
 const Order = ({ order }) => {
   const status = order.status;
@@ -54,6 +55,19 @@ const Order = ({ order }) => {
             </div>
           </div>
           <div className={statusClass(1)}>
+            <CutOutline color={"#00000"} height="26px" width="26px" />
+            <span>Preparing</span>
+            <div className={styles.checkedIcon}>
+              <Image
+                className={styles.checkedIcon}
+                src="/img/checked.png"
+                alt=""
+                width={20}
+                height={20}
+              />
+            </div>
+          </div>
+          <div className={statusClass(2)}>
             <Image src="/img/bike.png" alt="" width={30} height={30} />
             <span>Sending</span>
             <div className={styles.checkedIcon}>
@@ -66,7 +80,8 @@ const Order = ({ order }) => {
               />
             </div>
           </div>
-          <div className={statusClass(2)}>
+
+          <div className={statusClass(3)}>
             <Image src="/img/delivered.png" alt="" width={30} height={30} />
             <span>Delivered</span>
             <div className={styles.checkedIcon}>
@@ -96,6 +111,7 @@ const Order = ({ order }) => {
   );
 };
 
+//take id parameter and make api request, returning set props
 export const getServerSideProps = async ({ params }) => {
   const res = await axios.get(`http://localhost:3000/api/orders/${params.id}`);
   return {
