@@ -16,8 +16,31 @@ const Index = ({ orders, products }) => {
       const res = await axios.delete(
         "http://localhost:3000/api/products/" + id
       );
+
       setMovieList(movieList.filter((movie) => movie._id !== id));
     } catch (err) {
+      console.log(err);
+    }
+  };
+
+  //function with trycatch statement to change status when clicking button from initial value 0 to 1
+  const handleStatus = async (id) => {
+    const item = orderList.filter((order) => order._id === id)[0];
+    const currentStatus = item.status;
+
+    try {
+      //sending data and taking in it by adding "req.body" to the try block in the if statement with put method condition in the products [id] file in api folder.
+      //updated product will show up since "new:true" is added to the try block.
+      const res = await axios.put("http://localhost:3000/api/orders/" + id, {
+        status: currentStatus + 1,
+      });
+
+      //delete order from orderList then add new one
+      setOrderList([
+        res.data,
+        ...orderList.filter((order) => order._id !== id),
+      ]);
+    } catch (error) {
       console.log(err);
     }
   };
@@ -93,7 +116,9 @@ const Index = ({ orders, products }) => {
                 </td>
                 <td>{status[order.status]}</td>
                 <td>
-                  <button>Next stage</button>
+                  <button onClick={() => handleStatus(order._id)}>
+                    Next stage
+                  </button>
                 </td>
               </tr>
             </tbody>

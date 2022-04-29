@@ -19,7 +19,8 @@ const handler = async (req, res) => {
       res.status(500).json(err);
     }
   }
-
+  //sending data and taking in it by adding req.body to the try block in the if statement with put method condition
+  //updated product will show up in admin page since new:true is added to the try block
   if (method === "PUT") {
     try {
       const order = await Order.findByIdAndUpdate(id, req.body, {
