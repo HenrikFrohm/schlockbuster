@@ -27,10 +27,6 @@ const Product = ({ movie }) => {
     changePrice(difference);
   };
 
-  const handleChange = (e, option) => {
-    const checked = e.target.checked;
-  };
-
   //dispatch cart actions onclick
   const handleClick = () => {
     dispatch(addProduct({ ...movie, price, quantity }));
