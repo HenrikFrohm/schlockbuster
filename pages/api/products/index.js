@@ -17,6 +17,7 @@ export default async function handler(req, res) {
     }
   }
 
+  // POST request method with async process to create products in db.
   if (method === "POST") {
     try {
       const product = await Product.create(req.body);

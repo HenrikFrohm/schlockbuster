@@ -20,14 +20,13 @@ const Footer = () => {
           </p>
         </div>
         <div className={styles.card}>
-          <h1 className={styles.title}>EXPLORE</h1>
-          <p className={styles.link}>
-            <Link href="/About">ABOUT</Link>
+          <h1 className={styles.title}>CONTACT</h1>
+          <p className={styles.info}>
+            <strong>Phone:</strong> <br /> 070712345
           </p>
-          <p className={styles.link}>
-            <Link href="/Community">COMMUNITY</Link>
+          <p className={styles.info}>
+            <strong>Email:</strong> <br /> schlockbuster.support@gmail.com
           </p>
-          <p className={styles.link}>CONTACT</p>
         </div>
         <div className={styles.card}>
           <h1 className={styles.title}>FOLLOW US</h1>

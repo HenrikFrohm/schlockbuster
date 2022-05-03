@@ -21,6 +21,7 @@ export default async function handler(req, res) {
     }
   }
 
+  // PUT request with async process to alter/edit/update products from db by id
   if (method === "PUT") {
     try {
       const product = await Product.findByIdAndUpdate(id, req.body, {

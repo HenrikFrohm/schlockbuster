@@ -1,7 +1,12 @@
 import Image from "next/image";
 import styles from "../styles/Carousel.module.css";
 import { useState } from "react";
-import { ArrowBackOutline, ArrowForwardOutline } from "react-ionicons";
+import {
+  ArrowBackOutline,
+  ArrowForwardOutline,
+  ArrowDownCircleOutline,
+} from "react-ionicons";
+import MovieCard from "./MovieCard";
 
 const Carousel = () => {
   // useState hook to set index, starting with first image.
@@ -31,7 +36,7 @@ const Carousel = () => {
         style={{ left: 210 }}
         onClick={() => handleArrow("l")}
       >
-        <ArrowBackOutline alt="" height="50px" width="50px" color="white" />
+        <ArrowBackOutline alt="" height="50px" width="50px" color="#b7903c" />
       </div>
       {/* css function to reposition element horizontally at correct size when onclick event is executed */}
       <div
@@ -50,20 +55,32 @@ const Carousel = () => {
         style={{ right: 180 }}
         onClick={() => handleArrow("r")}
       >
-        <ArrowForwardOutline alt="" height="50px" width="50px" color="white" />
+        <ArrowForwardOutline
+          alt=""
+          height="50px"
+          width="50px"
+          color="#b7903c"
+        />
       </div>
 
       <div className={styles.textContainer}>
-        <h1 className={styles.title}>MOVIE TITLE</h1>
+        <h1 className={styles.title}>Popular movies</h1>
         <p className={styles.description}>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat, eum
-          facere. Numquam omnis voluptates consectetur pariatur mollitia odit
-          alias cupiditate, sint, modi dignissimos laboriosam dolorum possimus
-          corrupti excepturi aspernatur distinctio.
+          Welcome to Schlockbuster, a portal for the finest b-movies in the
+          world. Here you can get a snippet of what is on offer.
         </p>
         <div className={styles.buttons}>
-          <div className={styles.browse}>More info</div>
-          <div className={styles.browse}>Explore genres</div>
+          <div className={styles.browse}>
+            Explore featured movies below
+            <div className={styles.arrowDownContainer}>
+              <ArrowDownCircleOutline
+                alt=""
+                height="50px"
+                width="50px"
+                color="#b7903c"
+              />
+            </div>
+          </div>
         </div>
       </div>
     </div>

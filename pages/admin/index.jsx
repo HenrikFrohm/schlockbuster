@@ -130,7 +130,7 @@ const Index = ({ orders, products }) => {
 };
 
 export const getServerSideProps = async (ctx) => {
-  //use contex and take request, if it is not equal to env token, redirect to login page
+  //use context and take request on server, if it is not equal to env token, redirect to login page
   const myCookie = ctx.req?.cookies || "";
 
   if (myCookie.token !== process.env.TOKEN) {

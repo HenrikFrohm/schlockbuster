@@ -24,6 +24,10 @@
   opacity: 1;
 }
 
+.arrowDownContainer {
+  margin-top: 10px;
+}
+
 .wrapper {
   display: flex;
   width: 299vw;

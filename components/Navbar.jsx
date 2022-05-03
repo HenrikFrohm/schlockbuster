@@ -33,6 +33,7 @@ const Navbar = () => {
           <li className={styles.li}>
             <Link href="/">HOME</Link>
           </li>
+          {/* */}
           <li className={styles.li}>
             <Link href="/">GENRES</Link>
           </li>
@@ -41,9 +42,6 @@ const Navbar = () => {
           </li>
           <li className={styles.li}>
             <Link href="/About">ABOUT</Link>
-          </li>
-          <li className={styles.li}>
-            <Link href="/">CONTACT</Link>
           </li>
           <Link href="/cart" passHref>
             <div className={styles.cart}>

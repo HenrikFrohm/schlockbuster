@@ -6,6 +6,7 @@ const MovieList = ({ movieList }) => {
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>Featured movies</h1>
+      <p className={styles.description}></p>
       {/* wrapper  */}
       <div className={styles.wrapper}>
         {movieList.map((movie) => (

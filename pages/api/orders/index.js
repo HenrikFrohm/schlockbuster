@@ -7,7 +7,7 @@ const handler = async (req, res) => {
 
   await dbConnect();
 
-  // GET request with async process to get orders from db, or find a specific with title, description and so forth.
+  // GET request method with async process to get orders from db, or find a specific with title, description and so forth.
   if (method === "GET") {
     try {
       const orders = await Order.find();
@@ -16,7 +16,7 @@ const handler = async (req, res) => {
       res.status(500).json(err);
     }
   }
-
+  // POST request method with async process to create orders in db.
   if (method === "POST") {
     try {
       const order = await Order.create(req.body);
