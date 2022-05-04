@@ -1,0 +1,37 @@
+.container {
+  height: calc(100vh - 100px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 50px;
+  background-color: black;
+}
+
+.input {
+  height: 40px;
+  margin-bottom: 20px;
+  padding: 0px 10px;
+  background-color: black;
+  color: white;
+}
+
+.button {
+  height: 40px;
+  margin-bottom: 20px;
+  border: none;
+  background-color: #b7903c;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.error {
+  font-size: 13px;
+  color: white;
+}

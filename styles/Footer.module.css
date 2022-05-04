@@ -1,0 +1,111 @@
+.container {
+  height: calc(100vh - 600px);
+  background-color: #222;
+  display: flex;
+  overflow: hidden;
+}
+
+.item {
+  flex: 1;
+  position: relative;
+  display: flex;
+  align-items: baseline;
+}
+
+.item:last-child {
+  flex: 2;
+  padding: 50px;
+  justify-content: space-between;
+}
+
+.card {
+  flex: 1;
+  padding: 0 20px;
+}
+
+.card:first-child {
+  margin-top: -20px;
+  margin-right: 80px;
+}
+
+.title {
+  font-size: 18px;
+  color: #b7903c;
+}
+
+.link {
+  color: lightgray;
+}
+
+.link:hover {
+  color: white;
+  opacity: 1;
+}
+
+.info {
+  color: lightgray;
+}
+
+.logo {
+  font-size: 24px;
+  color: #b7903c;
+}
+
+.logoDescription {
+  color: rgb(211, 211, 211);
+}
+
+@media screen and (max-width: 1050px) {
+  .item:first-child {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 715px) {
+  .container {
+    height: auto;
+    text-align: center;
+  }
+  .item:first-child {
+    display: none;
+  }
+
+  .item {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .card:first-child {
+    margin: auto;
+  }
+}
+
+/* 
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 10px;
+}
+
+.logoText {
+  font-size: 24px;
+  font-weight: 800;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.description {
+  font-size: 16px;
+  width: 70%;
+}
+
+.wrapper {
+  display: flex;
+  width: 100%;
+}
+
+.footerItem {
+  width: 7%;
+}
+*/

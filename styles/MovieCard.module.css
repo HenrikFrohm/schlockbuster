@@ -1,0 +1,103 @@
+.container {
+  width: 22%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  padding: 20px;
+}
+
+.image {
+  cursor: pointer;
+}
+
+.title {
+  font-size: 22px;
+  font-weight: 800;
+  color: #b7903c;
+  cursor: pointer;
+}
+
+.title:hover {
+  color: white;
+  opacity: 1;
+}
+
+.price {
+  font-size: 20px;
+  font-weight: 500;
+  color: white;
+  padding-bottom: 15px;
+}
+
+.genre {
+  font-size: 20px;
+  font-weight: 500;
+  color: white;
+}
+
+.description {
+  font-size: 17px;
+  color: white;
+}
+
+@media screen and (max-width: 1300px) {
+  .container {
+    width: 30%;
+  }
+  .title {
+    font-size: 160%;
+  }
+  .genre {
+    font-size: 120%;
+  }
+  .description {
+    font-size: 105%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .container {
+    width: 50%;
+  }
+  .title {
+    font-size: 170%;
+  }
+  .genre {
+    font-size: 130%;
+  }
+  .description {
+    font-size: 110%;
+  }
+}
+
+@media screen and (max-width: 610px) {
+  .container {
+    width: 75%;
+    text-align: center;
+  }
+  .title {
+    font-size: 180%;
+  }
+  .genre {
+    font-size: 140%;
+  }
+  .description {
+    font-size: 115%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    width: 100%;
+  }
+  .title {
+    font-size: 190%;
+  }
+  .genre {
+    font-size: 150%;
+  }
+  .description {
+    font-size: 120%;
+  }
+}

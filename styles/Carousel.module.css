@@ -1,0 +1,171 @@
+.container {
+  height: calc(100vh - 120px);
+  position: relative;
+  padding-top: 18px;
+  padding-bottom: 20px;
+  border: 0;
+  border-bottom: 0.1px;
+  border-color: white;
+  border-style: groove;
+  overflow: hidden;
+}
+
+.arrowContainer {
+  position: absolute;
+  top: 0;
+  bottom: 25%;
+  margin: auto;
+  cursor: pointer;
+  z-index: 2;
+  opacity: 0.8;
+}
+
+.arrowContainer:hover {
+  opacity: 1;
+}
+
+.arrowDownContainer {
+  margin-top: 10px;
+}
+
+.wrapper {
+  display: flex;
+  width: 299vw;
+  height: 70%;
+}
+
+.imgContainer {
+  width: 50%;
+  height: 100%;
+  position: relative;
+}
+
+.textContainer {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  padding: 5px 28%;
+  margin-top: -10px;
+  color: white;
+}
+
+.title {
+  color: #b7903c;
+}
+
+.description {
+  text-align: center;
+  margin-top: -5px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  font-weight: 700;
+  line-height: 27px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.infoButton {
+  padding: 10px;
+  margin: 20px;
+  background-color: #b7903c;
+  width: 150px;
+  border-radius: 10px;
+  color: white;
+  font-weight: 700;
+  font-size: 14px;
+  text-align: center;
+
+  cursor: pointer;
+}
+
+@media screen and (min-width: 721px) {
+  .arrowContainer {
+    width: 70px;
+    height: 90px;
+    right: 40em;
+    left: 40em;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .textContainer {
+    padding: 5px 22%;
+  }
+}
+
+@media screen and (max-width: 940px) {
+  .container {
+    height: calc(100vh - 100px);
+  }
+  .wrapper {
+    height: 50%;
+  }
+
+  .textContainer {
+    padding: 3em 25%;
+    font-size: 18px;
+  }
+
+  .arrowContainer {
+    width: 20px;
+    height: 10px;
+    right: 19em;
+    left: 13em;
+    bottom: -5%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .container {
+    height: calc(100vh - 50px);
+  }
+  .textContainer {
+    font-size: 18px;
+    padding: 4em 25%;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  .container {
+    height: calc(100vh + 120px);
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .textContainer {
+    font-size: 14px;
+    margin-top: -10%;
+  }
+}
+
+/* 
+@media screen and (max-width: 760px) {
+  .imgContainer {
+    height: 80%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .imgContainer {
+    height: 70%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .imgContainer {
+    height: 60%;
+  }
+}
+*/

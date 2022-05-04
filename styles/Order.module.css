@@ -1,0 +1,120 @@
+.container {
+  display: flex;
+  padding: 50px;
+  color: black;
+  background-color: white;
+}
+
+.left {
+  flex: 2;
+}
+
+.right {
+  flex: 1;
+}
+
+.table {
+  width: 100%;
+  text-align: left;
+  margin-bottom: 50px;
+}
+
+.statusRow {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.done {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.inProgress {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.undone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0.3;
+}
+
+.undone .checkedIcon,
+.inProgress .checkedIcon {
+  display: none;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 90%;
+  max-height: 300px;
+  color: rgb(0, 0, 0);
+  border: 1px solid black;
+  background-color: rgb(255, 255, 255);
+  padding: 50px;
+  padding-top: 10px;
+}
+
+.button {
+  height: 30px;
+  margin-top: 20px;
+  color: white;
+  background-color: black;
+  cursor: not-allowed;
+}
+
+@media screen and (max-width: 650px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .trTitle {
+    display: none;
+  }
+  .tr {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+  }
+
+  .id::before {
+    content: "Order ID: ";
+    font-weight: 500;
+  }
+  .name::before {
+    content: "Customer: ";
+    font-weight: 500;
+  }
+  .address::before {
+    content: "Address: ";
+    font-weight: 500;
+  }
+  .total::before {
+    content: "Total: ";
+    font-weight: 500;
+  }
+  .statusRow {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .done,
+  .undone,
+  .inProgress {
+    margin-bottom: 20px;
+  }
+
+  .wrapper {
+    width: 100%;
+  }
+}
