@@ -18,11 +18,11 @@ export default function Home({ admin, movieList }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Carousel />
-      {/*  */}
+      {/* if admin is logged in, button will show up  */}
       {admin && <AddButton setClose={setClose} />}
       {/* high order component - a function that takes a component and returns a new component */}
       <MovieList movieList={movieList} />
-      {!close && <Add />}
+      {!close && <Add setClose={setClose} />}
     </div>
   );
 }

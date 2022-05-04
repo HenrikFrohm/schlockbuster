@@ -27,6 +27,14 @@ const Carousel = () => {
       setIndex(index !== 2 ? index + 1 : 0);
     }
   };
+  //scroll to bottom of homepage after clicking "more info" button
+  function handleScroll() {
+    window.scroll({
+      top: document.body.offsetHeight,
+      left: 0,
+      behavior: "smooth",
+    });
+  }
 
   return (
     // manually creating a carousel slideshow component for homepage, with parent container containing child containers for arrows and images.
@@ -64,23 +72,20 @@ const Carousel = () => {
       </div>
 
       <div className={styles.textContainer}>
-        <h1 className={styles.title}>Popular movies</h1>
+        <h1 className={styles.title}>Schlockbuster</h1>
         <p className={styles.description}>
-          Welcome to Schlockbuster, a portal for the finest b-movies in the
-          world. <br /> <br /> Here you can get a snippet of what is on offer.
+          Welcome to Schlockbuster, a platform for the finest b-movies in the
+          world. <br /> Here you can get a snippet of what is on offer.
         </p>
-        <div className={styles.buttons}>
-          <div className={styles.browse}>
-            Explore featured movies below
-            <div className={styles.arrowDownContainer}>
-              <ArrowDownCircleOutline
-                alt=""
-                height="50px"
-                width="50px"
-                color="#b7903c"
-              />
-            </div>
-          </div>
+        <div className={styles.info}>
+          <strong>Explore featured movies below</strong>
+          <button
+            type="button"
+            onClick={handleScroll}
+            className={styles.infoButton}
+          >
+            More info
+          </button>
         </div>
       </div>
     </div>
