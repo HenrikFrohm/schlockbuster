@@ -31,7 +31,7 @@ const Add = ({ setClose }) => {
         data
       );
 
-      //declaring uploadRes prop the uploadRes data. Creating newProduct const
+      //declaring uploadRes prop the uploadRes data. AFter uploading image
       const { url } = uploadRes.data;
       const newProduct = {
         title,
@@ -42,6 +42,7 @@ const Add = ({ setClose }) => {
         img: url,
       };
 
+      //when new product is created using api post request, call the setClose function to close the modal
       await axios.post("http://localhost:3000/api/products", newProduct);
       setClose(true);
     } catch (err) {
