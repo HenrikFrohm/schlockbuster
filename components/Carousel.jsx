@@ -6,7 +6,6 @@ import {
   ArrowForwardOutline,
   ArrowDownCircleOutline,
 } from "react-ionicons";
-import MovieCard from "./MovieCard";
 
 const Carousel = () => {
   // useState hook to set index, starting with first image.
