@@ -12,7 +12,7 @@ export default async function handler(req, res) {
 
   const token = cookies.token;
 
-  dbConnect();
+  await dbConnect();
 
   // GET request with async process to get products from db, or find a specific with title, description and so forth.
   if (method === "GET") {
