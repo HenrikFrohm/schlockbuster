@@ -8,7 +8,6 @@
   <h3 align="center">Schlockbuster</h3>
 
   <p align="center">
-    project_description
     <br />
     <a href="https://docs.google.com/document/d/1T134xvKSjl34GFB-TdQ9ewUv5FjgP00p/edit?usp=sharing&ouid=116450704019366372650&rtpof=true&sd=true"><strong>
      Requirements Specification »</strong></a>
@@ -17,7 +16,7 @@
     <a href="https://trello.com/invite/b/2rM8Q815/49ccd612f19a54c9d314fe54a953b0ec/schlockbuster">Kanban Board on Trello</a>
     <br />
     <br />
-    <a href="https://github.com/github_username/repo_name">View Demo</a>
+    <a href="schlockbuster.vercel.app">View Demo</a>
 
   </p>
 </p>
