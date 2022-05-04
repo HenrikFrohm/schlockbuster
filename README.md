@@ -1,10 +1,3 @@
-[![Requirement Spec][contributors-shield]][Requirement spec]
-[![Trello][issues-shield]][https://trello.com/invite/b/2rM8Q815/49ccd612f19a54c9d314fe54a953b0ec/schlockbuster]
-[![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][https://www.linkedin.com/in/henrik-frohm-7ab764207/]
-
-
-
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
@@ -35,6 +28,7 @@
 <details open="open">
   <summary><h2 style="display: inline-block">Table of Contents</h2></summary>
   <ol>
+    <li><a href="#deployment">Deployment</a></li>
     <li>
       <a href="#about-the-project">About The Project</a>
       <ul>
@@ -50,6 +44,7 @@
     </li>
     <li><a href="#usage">Usage</a></li>
     <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#contact">Contact</a></li>
     <li><a href="#https://github.com/HenrikFrohm/u11-project/blob/master/LICENSE.md">License</a></li>
   </ol>
 </details>
@@ -70,6 +65,11 @@ Schlockbuster is a portal for fans of schlock / b-movies where you as a user can
 * [Axios]()
 * [MongoDB]()
 
+<!-- DEPLOYMENT -->
+## Deployement
+
+Link to live/deployd website on Vercel: 
+schlockbuster.vercel.app
 
 <!-- GETTING STARTED -->
 ## Getting Started
@@ -98,7 +98,7 @@ This is an example of how to list things you need to use the software and how to
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-This application can be used as a good starter point and can be built upon for a bigger commercial e-shop or a personal project.
+This application contains frontend/back and can be used as a good starter point/be built upon for a bigger commercial e-shop or a personal project.
 
 <!-- CONTRIBUTING -->
 ## Contributing
@@ -109,8 +109,15 @@ This application can be used as a good starter point and can be built upon for a
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
+<!-- CONTACT -->
+## Contact
+
+Email: henrik.frohm@chasacademy.se
+Linkedin: https://www.linkedin.com/in/henrik-frohm-7ab764207/
+
 <!-- LICENSE -->
 ## License
 
 Distributed under the MIT License. See `LICENSE` for more information.
+
 
