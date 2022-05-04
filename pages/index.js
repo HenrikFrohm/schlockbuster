@@ -1,11 +1,15 @@
 import axios from "axios";
 import Head from "next/head";
+import { useState } from "react";
 
 import Carousel from "../components/Carousel";
 import MovieList from "../components/MovieList";
+import AddButton from "../components/Add/AddButton";
+import Add from "../components/Add/Add";
 import styles from "../styles/Home.module.css";
 
 export default function Home({ admin, movieList }) {
+  const [close, setClose] = useState(true);
   return (
     <div className={styles.container}>
       <Head>
@@ -14,10 +18,11 @@ export default function Home({ admin, movieList }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Carousel />
-      {admin && <span>hello</span>}
+      {/*  */}
+      {admin && <AddButton setClose={setClose} />}
       {/* high order component - a function that takes a component and returns a new component */}
       <MovieList movieList={movieList} />
-      {/*      <Image src="/img/poster.jpg" alt="Poster" layout="fill" /> */}
+      {!close && <Add />}
     </div>
   );
 }

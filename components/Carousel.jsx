@@ -67,7 +67,7 @@ const Carousel = () => {
         <h1 className={styles.title}>Popular movies</h1>
         <p className={styles.description}>
           Welcome to Schlockbuster, a portal for the finest b-movies in the
-          world. Here you can get a snippet of what is on offer.
+          world. <br /> <br /> Here you can get a snippet of what is on offer.
         </p>
         <div className={styles.buttons}>
           <div className={styles.browse}>
