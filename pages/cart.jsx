@@ -29,9 +29,23 @@ const Cart = () => {
 
   // async function with try catch statement. Make api post request to send data when using payment methods. If successful, dispatch reset action from redux, return 201 success status response and redirect/push customer to orderpage with order id
   // if it fails, console log error
-  const createOrder = async (data) => {
+  /*  const createOrder = async (data) => {
     try {
       const res = await axios.post("http://localhost:3000/api/orders", data);
+      if (res.status === 201) {
+        dispatch(reset());
+        router.push(`/orders/${res.data._id}`);
+      }
+    } catch (err) {
+      console.log(err);
+    }
+  }; */
+  const createOrder = async (data) => {
+    try {
+      const res = await axios.post(
+        "https://schlockbuster.vercel.app/api/orders",
+        data
+      );
       if (res.status === 201) {
         dispatch(reset());
         router.push(`/orders/${res.data._id}`);

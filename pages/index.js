@@ -38,7 +38,8 @@ export const getServerSideProps = async (ctx) => {
     admin = true;
   }
 
-  const res = await axios.get("http://localhost:3000/api/products");
+  //  const res = await axios.get("http://localhost:3000/api/products");
+  const res = await axios.get("https://schlockbuster.vercel.app/api/products");
   //pass data to pages/components via props
   return {
     props: {

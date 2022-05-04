@@ -114,7 +114,8 @@ const Product = ({ movie }) => {
 
 export const getServerSideProps = async ({ params }) => {
   const res = await axios.get(
-    `http://localhost:3000/api/products/${params.id}`
+    // `http://localhost:3000/api/products/${params.id}`
+    `https://schlockbuster.vercel.app/api/products/${params.id}`
   );
   //pass data to pages/components via props
   return {

@@ -113,7 +113,10 @@ const Order = ({ order }) => {
 
 //take id parameter and make api request, returning set props
 export const getServerSideProps = async ({ params }) => {
-  const res = await axios.get(`http://localhost:3000/api/orders/${params.id}`);
+  const res = await axios.get(
+    //  `http://localhost:3000/api/orders/${params.id}`);
+    `https://schlockbuster.vercel.app/api/orders/${params.id}`
+  );
   return {
     props: { order: res.data },
   };

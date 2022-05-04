@@ -43,7 +43,16 @@ const Add = ({ setClose }) => {
       };
 
       //when new product is created using api post request, call the setClose function to close the modal
-      await axios.post("http://localhost:3000/api/products", newProduct);
+      /*      await axios.post("http://localhost:3000/api/products", newProduct);
+      setClose(true);
+    } catch (err) {
+      console.log(err);
+    }
+  }; */
+      await axios.post(
+        "https://schlockbuster.vercel.app/api/products",
+        newProduct
+      );
       setClose(true);
     } catch (err) {
       console.log(err);
