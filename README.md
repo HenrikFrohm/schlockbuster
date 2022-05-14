@@ -2,14 +2,14 @@
 <br />
 <p align="center">
   <a href="https://github.com/HenrikFrohm/schlockbuster">
-    <img src="public/img/SchlockbusterImage.png" alt="Logo" width="80" height="80">
+    <img src="public/img/logo.png" alt="Logo" width="250" height="250">
   </a>
 
   <h3 align="center">Schlockbuster</h3>
 
   <p align="center">
     <br />
-    <a href="https://docs.google.com/document/d/1T134xvKSjl34GFB-TdQ9ewUv5FjgP00p/edit?usp=sharing&ouid=116450704019366372650&rtpof=true&sd=true"><strong>
+    <a href="https://docs.google.com/document/d/1yhfiuTKfEEc105sXIp1W1V0X1HR-S-C2/edit?usp=sharing&ouid=116450704019366372650&rtpof=true&sd=true"><strong>
      Requirements Specification »</strong></a>
     <br />
     <br />
@@ -97,7 +97,7 @@ This is an example of how to list things you need to use the software and how to
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-This application contains frontend/back and can be used as a good starter point/be built upon for a bigger commercial e-shop or a personal project.
+This application contains frontend/backend and can be used as a good starter point/be built upon for a bigger commercial e-shop or a personal project.
 
 <!-- CONTRIBUTING -->
 ## Contributing
@@ -118,5 +118,4 @@ Linkedin: https://www.linkedin.com/in/henrik-frohm-7ab764207/
 ## License
 
 Distributed under the MIT License. See `LICENSE` for more information.
-
 
