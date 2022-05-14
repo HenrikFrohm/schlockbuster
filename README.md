@@ -9,7 +9,7 @@
 
   <p align="center">
     <br />
-    <a href="https://docs.google.com/document/d/1T134xvKSjl34GFB-TdQ9ewUv5FjgP00p/edit?usp=sharing&ouid=116450704019366372650&rtpof=true&sd=true"><strong>
+    <a href="https://docs.google.com/document/d/1yhfiuTKfEEc105sXIp1W1V0X1HR-S-C2/edit?usp=sharing&ouid=116450704019366372650&rtpof=true&sd=true"><strong>
      Requirements Specification »</strong></a>
     <br />
     <br />
