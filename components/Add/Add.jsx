@@ -57,7 +57,7 @@ const Add = ({ setClose }) => {
         <span onClick={() => setClose(true)} className={styles.close}>
           X
         </span>
-        <h1>Add a new Pizza</h1>
+        <h1>Add a new Movie</h1>
         <div className={styles.item}>
           <label className={styles.label}>Choose an image</label>
           {/* onChange event when value of element is changed, here when a image file is picked. e.target.file[0] to choose first file, which limits the option to choose files to only 1. */}
