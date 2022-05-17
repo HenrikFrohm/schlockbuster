@@ -1,34 +1,120 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<!-- PROJECT LOGO -->
+<br />
+<p align="center">
+  <a href="https://github.com/HenrikFrohm/schlockbuster">
+    <img src="public/img/logo.png" alt="Logo" width="250" height="250">
+  </a>
 
+  <h3 align="center">Schlockbuster</h3>
+
+  <p align="center">
+    <br />
+    <a href="https://docs.google.com/document/d/1yhfiuTKfEEc105sXIp1W1V0X1HR-S-C2/edit?usp=sharing&ouid=116450704019366372650&rtpof=true&sd=true"><strong>
+     Requirements Specification »</strong></a>
+    <br />
+    <br />
+    <a href="https://trello.com/invite/b/2rM8Q815/49ccd612f19a54c9d314fe54a953b0ec/schlockbuster">Kanban Board on Trello</a>
+    <br />
+    <br />
+    <a href="schlockbuster.vercel.app">View Demo</a>
+
+  </p>
+</p>
+
+
+
+<!-- TABLE OF CONTENTS -->
+<details open="open">
+  <summary><h2 style="display: inline-block">Table of Contents</h2></summary>
+  <ol>
+    <li><a href="#deployment">Deployment</a></li>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#usage">Usage</a></li>
+    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#https://github.com/HenrikFrohm/u11-project/blob/master/LICENSE.md">License</a></li>
+  </ol>
+</details>
+
+
+<!-- ABOUT THE PROJECT -->
+## About The Project
+
+Schlockbuster is a portal for fans of schlock / b-movies where you as a user can explore a large selection of famous and popular b-movies. It is possible to get a summary of each film, add films to a cart and buy films using paypal- or pay-on-delivery payment methods. As an admin, you can add new movies, delete movies, see which movies are uploaded and view / edit the order status of movies that users have bought / rented.
+
+### Built With
+
+* [React]()
+* [Next.js]()
+* [Node.js]()
+* [React Redux]()
+* [Mongoose]()
+* [Axios]()
+* [MongoDB]()
+
+<!-- DEPLOYMENT -->
+## Deployement
+
+Link to live/deployd website on Vercel: 
+schlockbuster.vercel.app
+
+<!-- GETTING STARTED -->
 ## Getting Started
 
-First, run the development server:
+To get a local copy up and running follow these simple steps.
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+### Prerequisites
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+This is an example of how to list things you need to use the software and how to install them.
+* npm
+  ```sh
+  npm install npm@latest -g
+  ```
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+### Installation
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+1. Clone the repo
+   ```sh
+   git clone https://github.com/HenrikFrohm/u11-project.git
+   ```
+2. Install NPM packages
+   ```sh
+   npm install
+   ```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+<!-- USAGE EXAMPLES -->
+## Usage
 
-## Learn More
+This application contains frontend/backend and can be used as a good starter point/be built upon for a bigger commercial e-shop or a personal project.
 
-To learn more about Next.js, take a look at the following resources:
+<!-- CONTRIBUTING -->
+## Contributing
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+<!-- CONTACT -->
+## Contact
 
-## Deploy on Vercel
+Email: henrik.frohm@chasacademy.se
+Linkedin: https://www.linkedin.com/in/henrik-frohm-7ab764207/
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+<!-- LICENSE -->
+## License
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Distributed under the MIT License. See `LICENSE` for more information.
