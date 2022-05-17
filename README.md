@@ -16,7 +16,7 @@
     <a href="https://trello.com/invite/b/2rM8Q815/49ccd612f19a54c9d314fe54a953b0ec/schlockbuster">Kanban Board on Trello</a>
     <br />
     <br />
-    <a href="schlockbuster.vercel.app">View Demo</a>
+    <a href="https://schlockbuster.vercel.app/">View Demo</a>
 
   </p>
 </p>
