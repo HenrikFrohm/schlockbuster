@@ -87,7 +87,7 @@ This is an example of how to list things you need to use the software and how to
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/HenrikFrohm/u11-project.git
+   git clone https://github.com/HenrikFrohm/schlockbuster.git
    ```
 2. Install NPM packages
    ```sh
@@ -111,7 +111,7 @@ This application contains frontend/backend and can be used as a good starter poi
 <!-- CONTACT -->
 ## Contact
 
-Email: henrik.frohm@chasacademy.se
+Email: henrik.frohm1@gmail.com
 Linkedin: https://www.linkedin.com/in/henrik-frohm-7ab764207/
 
 <!-- LICENSE -->
